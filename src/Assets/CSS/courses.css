@@ -1,0 +1,392 @@
+.navParent{
+    background-color: coral;
+    display: flex;
+    padding-top: 10px
+};
+.navParent nav ul{
+    list-style: none;
+    display: flex;
+}
+.navParent nav ul li{
+    display: inline;
+    padding-right: 20px;
+}
+.navLink{
+    text-decoration: none;
+    color: rgb(16, 16, 54); 
+}
+.navParent nav .active{
+    background-color: rgb(225, 255, 127);
+    color: brown;
+    padding: 15px 5px 25px 5px;
+}
+.navCart{
+    cursor: pointer;
+    width: 100%;
+    /* background-color: blanchedalmond; */
+}
+.navCart span{
+    float: right;
+    padding-right: 20px;
+    padding-top: 7px;
+}
+.header{
+    position: absolute;
+    top: 150px;
+    left: 100px;
+    width: 500px;
+    font-weight: bolder;
+    font-size: large;
+    color: rgb(42, 30, 210);
+    border: 1px solid black;
+    background-color: white;
+    border-radius: 10px;
+    padding: 30px;
+}
+@media (max-width:900px){
+    .header{
+      display: none;
+    }
+}
+.nav-table{
+  position: absolute;
+  left: 2px;
+  width: 80%;
+  background-color: #dad25e;
+  border: 1px solid black;
+}
+/* #nav-menu{
+   display: none;
+} */
+@media (min-width:670px){
+  #nav-menu1{
+     display: none;
+  }
+}
+@media (max-width:670px){
+  #nav-menu2{
+     display: none;
+  }
+}
+.section-1{
+    padding: 20px ;
+    padding-bottom: 45px;
+}
+.section-1 img{
+    float: left;
+    margin-top: 5px;
+    border-radius: 20px;
+    height: 300px;
+    margin-right: 20px;
+}
+.section-2{
+    padding: 20px ;
+    background-color: rgb(247,248,250);
+    padding-bottom: 45px;
+}
+.section-2 img{
+    float: right;
+    margin-top: 5px;
+    border-radius: 20px;
+    height: 300px;
+    margin-right: 20px;
+}
+.section-3{
+    padding: 20px ;
+    /* background-color: rgb(137, 207, 208); */
+    padding-bottom: 45px;
+}
+.section-3 img{
+    float: left;
+    margin-top: 5px;
+    border-radius: 20px;
+    height: 300px;
+    margin-right: 20px;
+}
+.button-19 {
+  appearance: button;
+  background-color: #1f262a;
+  border: solid transparent;
+  border-radius: 16px;
+  border-width: 0 0 4px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: din-round,sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: .8px;
+  line-height: 20px;
+  margin: 0;
+  outline: none;
+  overflow: visible;
+  padding: 13px 16px;
+  text-align: center;
+  text-transform: uppercase;
+  touch-action: manipulation;
+  transform: translateZ(0);
+  transition: filter .2s;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  /* width: 100%; */
+}
+
+.section-1 .button-19:after {
+  background-clip: padding-box;
+  background-color: #7b729e;
+  border: solid transparent;
+  border-radius: 16px;
+  border-width: 0 0 4px;
+  bottom: -4px;
+  content: "";
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -1;
+}
+.section-2 .button-19:after {
+    background-clip: padding-box;
+    background-color: #dad25e;
+    border: solid transparent;
+    border-radius: 16px;
+    border-width: 0 0 4px;
+    bottom: -4px;
+    content: "";
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -1;
+  }
+  .section-3 .button-19:after {
+    background-clip: padding-box;
+    background-color: rgb(94, 197, 176);
+    border: solid transparent;
+    border-radius: 16px;
+    border-width: 0 0 4px;
+    bottom: -4px;
+    content: "";
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -1;
+  }
+
+.button-19:main,
+.button-19:focus {
+  user-select: auto;
+}
+
+.button-19:hover:not(:disabled) {
+  filter: brightness(1.1);
+  -webkit-filter: brightness(1.1);
+}
+
+.button-19:disabled {
+  cursor: auto;
+}
+
+.button-19:active {
+  border-width: 4px 0 0;
+  background: none;
+}
+.Card p{
+    display: flex;
+    padding: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.Card-items{
+    margin: 10px;
+}
+.main-card{
+    height: 500px;
+}
+.alertCard{
+   height: 300px;
+   width: 500px;
+   border: 1px solid black;
+   border-radius: 10px;
+   padding: 20px;
+   padding-top: 50px;
+   text-align: center;
+   background-color: #cdc66e;
+   box-shadow: #458cb5;
+}
+.alertCard button{
+   background-color: #ADCFFF;
+}
+.button-33 {
+  background-color: #c2fbd7;
+  border-radius: 100px;
+  box-shadow: rgba(44, 187, 99, .2) 0 -25px 18px -14px inset,rgba(44, 187, 99, .15) 0 1px 2px,rgba(44, 187, 99, .15) 0 2px 4px,rgba(44, 187, 99, .15) 0 4px 8px,rgba(44, 187, 99, .15) 0 8px 16px,rgba(44, 187, 99, .15) 0 16px 32px;
+  color: green;
+  cursor: pointer;
+  display: inline-block;
+  font-family: CerebriSans-Regular,-apple-system,system-ui,Roboto,sans-serif;
+  padding: 7px 20px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 250ms;
+  border: 0;
+  font-size: 16px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-33:hover {
+  box-shadow: rgba(44,187,99,.35) 0 -25px 18px -14px inset,rgba(44,187,99,.25) 0 1px 2px,rgba(44,187,99,.25) 0 2px 4px,rgba(44,187,99,.25) 0 4px 8px,rgba(44,187,99,.25) 0 8px 16px,rgba(44,187,99,.25) 0 16px 32px;
+  transform: scale(1.05) rotate(-1deg);
+}
+.course-details{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding: 20px;
+    text-align: center;
+}
+.button-77 {
+  align-items: center;
+  appearance: none;
+  background-clip: padding-box;
+  background-color: initial;
+  background-image: none;
+  border-style: none;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  flex-direction: row;
+  flex-shrink: 0;
+  font-family: Eina01,sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  justify-content: center;
+  line-height: 24px;
+  margin: 0;
+  min-height: 64px;
+  outline: none;
+  overflow: visible;
+  padding: 19px 26px;
+  pointer-events: auto;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  text-transform: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+  width: auto;
+  word-break: keep-all;
+  z-index: 0;
+}
+
+@media (min-width: 768px) {
+  .button-77 {
+    padding: 19px 32px;
+  }
+}
+
+.button-77:before,
+.button-77:after {
+  border-radius: 80px;
+}
+
+.button-77:before {
+  background-color: rgba(249, 58, 19, .32);
+  content: "";
+  display: block;
+  height: 100%;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: -2;
+}
+
+.button-77:after {
+  background-color: initial;
+  background-image: linear-gradient(92.83deg, #ff7426 0, #f93a13 100%);
+  bottom: 4px;
+  content: "";
+  display: block;
+  left: 4px;
+  overflow: hidden;
+  position: absolute;
+  right: 4px;
+  top: 4px;
+  transition: all 100ms ease-out;
+  z-index: -1;
+}
+
+.button-77:hover:not(:disabled):after {
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  transition-timing-function: ease-in;
+}
+
+.button-77:active:not(:disabled) {
+  color: #ccc;
+}
+
+.button-77:active:not(:disabled):after {
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, .2), rgba(0, 0, 0, .2)), linear-gradient(92.83deg, #ff7426 0, #f93a13 100%);
+  bottom: 4px;
+  left: 4px;
+  right: 4px;
+  top: 4px;
+}
+
+.button-77:disabled {
+  cursor: default;
+  opacity: .24;
+}
+.button-73 {
+  appearance: none;
+  background-color: #FFFFFF;
+  border-radius: 40em;
+  border-style: none;
+  box-shadow: #ADCFFF 0 -12px 6px inset;
+  box-sizing: border-box;
+  color: #000000;
+  cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system,sans-serif; 
+  letter-spacing: -.24px;
+  margin: 0;
+  outline: none;
+  padding: 1rem 1.3rem;
+  quotes: auto;
+  text-align: center;
+  text-decoration: none;
+  transition: all .15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-73:hover {
+  background-color: #FFC229;
+  box-shadow: #FF6314 0 -6px 8px inset;
+  transform: scale(1.125);
+}
+
+.button-73:active {
+  transform: scale(1.025);
+}
+
+@media (min-width: 768px) {
+  .button-73 {
+    font-size: 1.5rem;
+    padding: .75rem 2rem;
+  }
+}
