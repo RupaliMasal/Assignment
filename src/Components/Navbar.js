@@ -7,9 +7,7 @@ import { useSelector } from "react-redux";
 import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
-import Avatar from "@mui/material/Avatar";
-import Stack from "@mui/material/Stack";
-import Img3 from "../Assets/Images/avtar.jpg";
+import LogoutIcon from "@mui/icons-material/Logout";
 const Navbar = () => {
   const [show, setShow] = useState(false);
   const numItems = useSelector((state) => state.Cart.arrProducts.length);
@@ -24,8 +22,8 @@ const Navbar = () => {
         <div className="row">
           <div className=" col-12">
             <div className="navParent d-flex  justify-content-end ">
-              <nav >
-                <ul >
+              <nav>
+                <ul>
                   <li id="nav-menu1" onClick={toHandleClick}>
                     <IconButton
                       size="large"
@@ -53,79 +51,89 @@ const Navbar = () => {
                       Contact
                     </NavLink>
                   </li>
-               
-             
-              <span className=" ">
-                {isAuth ? (
-                  <span onClick={() => navigate("/LogOut")}>
-                    <Stack direction="row" spacing={2}>
-                      <Avatar alt="Remy Sharp" src={Img3} />
-                    </Stack>
-                  </span>
-                ) : (
                   <span>
-                    <IconButton
-                      onClick={() => navigate("/Login")}
-                      size="large"
-                      edge="start"
-                      color="inherit"
-                      aria-label="menu"
-                      sx={{ mr: 2 }}
-                    >
-                      <AccountCircleIcon />
-                    </IconButton>
+                    {isAuth ? (
+                      <span>
+                        <IconButton
+                          onClick={() => navigate("/LogOut")}
+                          size="large"
+                          edge="start"
+                          color="inherit"
+                          aria-label="menu"
+                          sx={{ mr: 2 }}
+                        >
+                          <LogoutIcon />
+                        </IconButton>
+                      </span>
+                    ) : (
+                      <span>
+                        <IconButton
+                          onClick={() => navigate("/Login")}
+                          size="large"
+                          edge="start"
+                          color="inherit"
+                          aria-label="menu"
+                          sx={{ mr: 2 }}
+                        >
+                          <AccountCircleIcon />
+                        </IconButton>
+                      </span>
+                    )}
                   </span>
-                )}
-              </span>
-              <span className="navCart" onClick={() => navigate("/Cart")}>
-                <span>
-                  <img src={Img1} alt="cartIcon" height={"30px"} /> : {numItems}
-                </span>
-              </span>
-              </ul>
+                  <span className="navCart" onClick={() => navigate("/Cart")}>
+                    <span>
+                      <img src={Img1} alt="cartIcon" height={"30px"} /> :{" "}
+                      {numItems}
+                    </span>
+                  </span>
+                </ul>
               </nav>
 
-          {show &&  <div className="row">
-            <table className="table table-striped nav-table ">
-              <tr>
-                <td>
-                  <NavLink onClick={toHandleClick} className="navLink" to="/">
-                    Home
-                  </NavLink>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <NavLink
-                    onClick={toHandleClick}
-                    className="navLink"
-                    to="/Product"
-                  >
-                    Product
-                  </NavLink>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <NavLink
-                    onClick={toHandleClick}
-                    className="navLink"
-                    to="/Contact"
-                  >
-                    Contact
-                  </NavLink>
-                </td>
-              </tr>
-            </table>
-          </div>}
+              {show && (
+                <div className="row">
+                  <table className="table table-striped nav-table ">
+                    <tr>
+                      <td>
+                        <NavLink
+                          onClick={toHandleClick}
+                          className="navLink"
+                          to="/"
+                        >
+                          Home
+                        </NavLink>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <NavLink
+                          onClick={toHandleClick}
+                          className="navLink"
+                          to="/Product"
+                        >
+                          Product
+                        </NavLink>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <NavLink
+                          onClick={toHandleClick}
+                          className="navLink"
+                          to="/Contact"
+                        >
+                          Contact
+                        </NavLink>
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+              )}
+            </div>
           </div>
         </div>
       </div>
-    </div>
     </div>
   );
 };
 
 export default Navbar;
-
-

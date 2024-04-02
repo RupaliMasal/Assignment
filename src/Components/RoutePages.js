@@ -8,7 +8,6 @@ import Footer from "./Footer";
 import Contact from "./Contact";
 import Product from "./Product";
 import Login from "./Login";
-
 import PrivateRoute from "./PrivateRoute";
 import Checkout from "./Checkout";
 import LogOut from "./LogOut";
@@ -27,7 +26,6 @@ const RoutePages = () => {
           <Route path="/ProductDetail/:userId" element={<ProductDetail />} />
           <Route path="/Login" element={<Login />} />
           <Route path="/LogOut" element={<LogOut />} />
-          <Route path="/Checkout" element={<Checkout />} />
           <Route
             path="/Checkout"
             element={
