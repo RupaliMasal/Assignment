@@ -1,31 +1,39 @@
-import * as React from 'react';
-import { styled } from '@mui/material/styles';
-import Card from '@mui/material/Card';
-import CardHeader from '@mui/material/CardHeader';
-import CardMedia from '@mui/material/CardMedia';
-import CardContent from '@mui/material/CardContent';
-import CardActions from '@mui/material/CardActions';
-import Avatar from '@mui/material/Avatar';
-import IconButton from '@mui/material/IconButton';
-import Typography from '@mui/material/Typography';
-import { red } from '@mui/material/colors';
-import FavoriteIcon from '@mui/icons-material/Favorite';
-import ShareIcon from '@mui/icons-material/Share';
-import MoreVertIcon from '@mui/icons-material/MoreVert';
-import '../Assets/CSS/courses.css'
+import * as React from "react";
+import { styled } from "@mui/material/styles";
+import Card from "@mui/material/Card";
+import CardHeader from "@mui/material/CardHeader";
+import CardMedia from "@mui/material/CardMedia";
+import CardContent from "@mui/material/CardContent";
+import CardActions from "@mui/material/CardActions";
+import Avatar from "@mui/material/Avatar";
+import IconButton from "@mui/material/IconButton";
+import Typography from "@mui/material/Typography";
+import { red } from "@mui/material/colors";
+import FavoriteIcon from "@mui/icons-material/Favorite";
+import ShareIcon from "@mui/icons-material/Share";
+import MoreVertIcon from "@mui/icons-material/MoreVert";
+import "../Assets/CSS/Product.css";
 
 const ExpandMore = styled((props) => {
   const { expand, ...other } = props;
   return <IconButton {...other} />;
 })(({ theme, expand }) => ({
-  transform: !expand ? 'rotate(0deg)' : 'rotate(180deg)',
-  marginLeft: 'auto',
-  transition: theme.transitions.create('transform', {
+  transform: !expand ? "rotate(0deg)" : "rotate(180deg)",
+  marginLeft: "auto",
+  transition: theme.transitions.create("transform", {
     duration: theme.transitions.duration.shortest,
   }),
 }));
 
-export default function RecipeReviewCard({image,description,title,category,instructor,courseId,funClick}) {
+export default function RecipeReviewCard({
+  image,
+  description,
+  title,
+  category,
+  price,
+  courseId,
+  funClick,
+}) {
   const [expanded, setExpanded] = React.useState(false);
 
   const handleExpandClick = () => {
@@ -33,7 +41,7 @@ export default function RecipeReviewCard({image,description,title,category,instr
   };
 
   return (
-    <Card sx={{ maxWidth: 345 }} className='main-card'>
+    <Card sx={{ maxWidth: 345 }} className="main-card">
       <CardHeader
         avatar={
           <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
@@ -46,19 +54,13 @@ export default function RecipeReviewCard({image,description,title,category,instr
           </IconButton>
         }
         title={title}
-        subheader={category} 
+        subheader={category}
       />
-      <CardMedia
-        component="img"
-        height="194"
-        image={image}
-        alt="Paella dish"
-      />
+      <CardMedia component="img" height="194" image={image} alt="Paella dish" />
       <CardContent>
         <Typography variant="body2" color="text.secondary">
-          Tutor : {instructor} <br />
+          Price : {price} <br />
           {description}
-          
         </Typography>
       </CardContent>
       <CardActions disableSpacing>
@@ -68,8 +70,14 @@ export default function RecipeReviewCard({image,description,title,category,instr
         <IconButton aria-label="share">
           <ShareIcon />
         </IconButton>
-        <button className="button-33" role="button" onClick={()=>funClick(courseId)}>Get in Detail</button>
+        <button
+          className="button-33"
+          role="button"
+          onClick={() => funClick(courseId)}
+        >
+          Get in Detail
+        </button>
       </CardActions>
-      </Card>
+    </Card>
   );
 }

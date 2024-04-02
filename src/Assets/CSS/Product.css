@@ -3,6 +3,7 @@
     display: flex;
     padding-top: 10px
 };
+
 .navParent nav ul{
     list-style: none;
     display: flex;
@@ -32,9 +33,9 @@
 }
 .header{
     position: absolute;
-    top: 150px;
+    top: 250px;
     left: 100px;
-    width: 500px;
+    width: 400px;
     font-weight: bolder;
     font-size: large;
     color: rgb(42, 30, 210);
@@ -42,6 +43,47 @@
     background-color: white;
     border-radius: 10px;
     padding: 30px;
+}
+.button{
+  position: absolute;
+  top: 700px;
+  left: 580px;
+}
+/* //login css */
+.form {
+	width: 350px;
+	margin: auto;
+	border: 1px solid gray;
+	border-radius: 10px;
+	padding: 50px;
+}
+
+input {
+	display: block;
+	outline: 0;
+	border: 1px solid gray;
+	border-radius: 15px;
+	padding: 5px 10px;
+	margin-top: 10px;
+}
+.radio {
+	display: inline;
+}
+
+/* label::after {
+	content: " *";
+	color: red;
+} */
+
+.error {
+	font-size: 12px;
+	font-style: italic;
+	color: red;
+	font-weight: 600;
+	margin-bottom: 30px;
+}
+.pagination{
+  margin-left: 600px;
 }
 @media (max-width:900px){
     .header{
